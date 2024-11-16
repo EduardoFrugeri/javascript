@@ -1,5 +1,6 @@
-	
-	Java script
+	<!- Anotações -!>
+
+		Java script
 
 	
 	Módulo A
