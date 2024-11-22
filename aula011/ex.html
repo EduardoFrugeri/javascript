@@ -99,7 +99,7 @@
 
         #verificar:hover{
             background-color: rgba(96, 110, 167, 0.589);
-            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.404);
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.404);
         }
 
         #Limpar{
@@ -118,7 +118,8 @@
 
         #Limpar:hover{
             background-color: rgba(96, 110, 167, 0.589);
-            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.404);
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.404);
+            
         }
 
         #resulpai{
@@ -150,7 +151,7 @@
     <h1>Nacionalidade</h1>
 
     <div class="pai">
-        <form action="">
+        <form action="" autocomplete="off">
             <label for="pais">Pais:</label>
             <input type="text" name="pais" id="txtpais">
         </form>
@@ -190,13 +191,42 @@
                 div.style.width = '400px'
                 
 
-            } else {
+            } 
 
-                res.innerHTML += ' Você é estrangeiro'
+            else{
+            if (pais == 'França' ) {
+
+                res.innerHTML += ' Você é Francês'
                 div = document.getElementById('resulpai')
                 div.style.width = '413px'
                 
             }
+
+            if (pais == 'Alemanha' ) {
+
+                res.innerHTML += ' Você é Alemão'
+                div = document.getElementById('resulpai')
+                div.style.width = '413px'
+
+        }
+
+             if (pais == 'Espanha' ) {
+
+            res.innerHTML += ' Você é Espanhol'
+            div = document.getElementById('resulpai')
+            div.style.width = '413px'
+
+}
+
+
+
+            else {
+
+            res.innerHTML += ' Você é estrangeiro'
+            div = document.getElementById('resulpai')
+            div.style.width = '413px'}
+
+}
 
   
             
