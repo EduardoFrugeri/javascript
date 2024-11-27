@@ -123,12 +123,11 @@
             document.querySelector("p#detected").style.display = "block"
             idade = (2024 - nasc)
             text = document.getElementById("detected")
+          //  document.getElementById("detected").innerHTML=idade
             
 
             txtmasc = getElementById("masc")
             masc = (txtmasc.value)
-
-            sexo = querySelector('input[name = sexo]:checked').value
 
             if (sexo === masc){
                 text.innerHTML =`Detectamos Homem com ${idade} anos`
