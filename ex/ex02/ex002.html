@@ -20,8 +20,10 @@
 
         h1{
             text-align: center;
-            margin: 30px;
+            margin: 15px;
+            
             color: white;
+            font-size: 1.6em;
         }
         main.quadro{
             display: block;
@@ -32,6 +34,7 @@
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.521);
+            transition:  height 0.3s ease;
         }
         p{
             font-size: 1.5em;
@@ -60,7 +63,7 @@
         form#form2{
             margin-top: -5px;
             padding: 10px;
-            padding-bottom: 22px;
+            padding-bottom: 12px;
             
 
         }
@@ -73,19 +76,25 @@
             
         }
 
-        div.img{
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: black;
+        img{
+        
             margin: auto;
-            background-image: url(jovemh.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: none;
+            display: block;
+           
+            width: 190px;
+            height: 190px;
+            
+           
+          
+
             
 
             
+        }
+
+
+        ::-webkit-scrollbar{
+            overflow: hidden;
         }
 
 
@@ -113,7 +122,7 @@
         <input type="button" value="Verificar" onclick="verificar()" id="botao">
         <div><p id="detected"></p></div>
 
-        <div class="img"></div>
+        <img src="jovemh3.png" alt="peoples" id="img">
 
         </main>
     </div>
@@ -124,6 +133,12 @@
 
 
         function verificar() {
+            document.querySelector("main.quadro").style.height = "345px"
+            document.querySelector("main.quadro").style.transition = "height 0.3s ease"
+            document.querySelector("main.quadro").style.marginTop = "20px"
+
+            
+
             var data = new Date()
             var ano = data.getFullYear()
             var fano = document.getElementById('txtano')
@@ -137,39 +152,60 @@
                 var idade = ano - Number(fano.value)
                
                 if(fsexo[0].checked){
+
                     genero = 'Homem'
+
+                    if(idade >0 && idade <= 10){
+                        document.querySelector('div.img').style.display = "block"
+                        document.querySelector('div.img').style.backgroundImage = "url('bebeh.jpg')"
+                        document.querySelector('div.img').style.backgroundPosition = "right"
+
+                        
+
+                    }
+                    else if(idade < 21){
+                       /* document.querySelector('div.img').style.backgroundImage = "url('jovemh.jpg')"
+                        document.querySelector('div.img').style.display = "block"*/
+
+                        
+                    }
+                    else if(idade < 50){
+
+                    }
+                    else {
+                        
+                    }
             } else if (fsexo[1].checked){
                     genero = 'Mulher'
+
+                    if(idade >0 && idade <= 10){
+
+                    }
+                    else if(idade < 21){
+                        
+                    }
+                    else if(idade < 50){
+
+                    }
+                    else {
+                        
+                    }
             }
 
             res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
 
                
             }
-
-            document.querySelector("main.quadro").style.height = "400px"
-            document.querySelector("main.quadro").style.marginBottom = "20px"
-
             document.querySelector("p#detected").style.display = "block"
             idade = (2024 - nasc)
 
-            if(genero = 'Mulher' && idade > 16){
-                document.style.querySelector('div.img').backgroundImage = 
-            }
             
-          //  document.getElementById("detected").innerHTML=idade
+            
+            document.querySelector("div.img").style.transition = "height 0.4s ease"
+          
             
 
-            txtmasc = getElementById("masc")
-            masc = (txtmasc.value)
 
-            if (sexo === masc){
-                text.innerHTML =`Detectamos Homem com ${idade} anos`
-                document.querySelector("div.img").style.display = "block"
-                document.querySelector("div.img").style.backgroundColor = "black"
-                
-                
-            }
         }
 
     </script>
