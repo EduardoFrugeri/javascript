@@ -46,6 +46,7 @@
             margin-top: -5px;
             color: rgb(0, 0, 0);
             display: none;
+           
             
         }
 
@@ -78,7 +79,13 @@
             border-radius: 50%;
             background-color: black;
             margin: auto;
+            background-image: url(jovemh.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
             display: none;
+            
+
+            
         }
 
 
@@ -92,18 +99,18 @@
         <form action="" id="form1">
             
                 <label for="nasc">Ano de Nascimento: </label>
-                <input type="number" name="txtnasc" id="txtnasc">
+                <input type="number" name="txtano" id="txtano">
         </form>
         <form action="" id="form2">
             <label for="sexo">Sexo: </label>
            
-                <input type="radio" name="sexo" id="masc" class="sexo" checked > Masculino
+                <input type="radio" name="sexo" id="mas" class="sexo" checked > Masculino
                 <input type="radio" name="sexo" id="fem" class="sexo"  > Feminino
            
         </form>
         
 
-        <input type="button" value="Verificar" onclick="calcular()" id="botao">
+        <input type="button" value="Verificar" onclick="verificar()" id="botao">
         <div><p id="detected"></p></div>
 
         <div class="img"></div>
@@ -116,13 +123,40 @@
         
 
 
-        function calcular() {
-            var txtn = document.getElementById("txtnasc")
-            var nasc = Number(txtn.value)
+        function verificar() {
+            var data = new Date()
+            var ano = data.getFullYear()
+            var fano = document.getElementById('txtano')
+            var res = document.getElementById('detected')
+
+            if(fano.value.length == 0 || fano.value > ano){
+                window.alert('[ERRO] Verifique os dados e TENTE NOVAMENTE!')
+            }
+            else{
+                var fsexo = document.getElementsByName('sexo')
+                var idade = ano - Number(fano.value)
+               
+                if(fsexo[0].checked){
+                    genero = 'Homem'
+            } else if (fsexo[1].checked){
+                    genero = 'Mulher'
+            }
+
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+
+               
+            }
+
             document.querySelector("main.quadro").style.height = "400px"
+            document.querySelector("main.quadro").style.marginBottom = "20px"
+
             document.querySelector("p#detected").style.display = "block"
             idade = (2024 - nasc)
-            text = document.getElementById("detected")
+
+            if(genero = 'Mulher' && idade > 16){
+                document.style.querySelector('div.img').backgroundImage = 
+            }
+            
           //  document.getElementById("detected").innerHTML=idade
             
 
