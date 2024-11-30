@@ -4,107 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-
-        *{
-            padding: 0px;
-            margin: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.281);
-        }
-
-        body{
-            background-color: rgb(56, 142, 255);
-        }
-
-        h1{
-            text-align: center;
-            margin: 15px;
-            
-            color: white;
-            font-size: 1.6em;
-        }
-        main.quadro{
-            display: block;
-            margin: auto;
-            width: 500px;
-            height: 130px;
-            background-color: white;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.521);
-            transition:  height 0.3s ease;
-        }
-        p{
-            font-size: 1.5em;
-            text-align: center;
-            padding: 20px;
-        }
-
-        p#detected{
-            font-size: 1.5em;
-            text-align: center;
-            padding: 20px;
-            margin-top: -5px;
-            color: rgb(0, 0, 0);
-            display: none;
-           
-            
-        }
+    <link rel="stylesheet" href="style.css">
 
     
-
-        form#form1{
-            padding: 10px;
-
-        }
-
-        form#form2{
-            margin-top: -5px;
-            padding: 10px;
-            padding-bottom: 12px;
-            
-
-        }
-
-        input#botao{
-            padding: 7px 20px;
-            display: block;
-            
-            margin: auto;
-            
-        }
-
-        img{
-        
-            margin: auto;
-            display: block;
-           
-            width: 190px;
-            height: 190px;
-            
-           
-          
-
-            
-
-            
-        }
-
-
-        ::-webkit-scrollbar{
-            overflow: hidden;
-        }
-
-
-
-    </style>
 </head>
 <body>
     <h1>Verificador de Idade</h1>
 
-    <main class="quadro">
+    <main id="quadro" class="wipe-in-down">
         <form action="" id="form1">
             
                 <label for="nasc">Ano de Nascimento: </label>
@@ -119,96 +26,15 @@
         </form>
         
 
-        <input type="button" value="Verificar" onclick="verificar()" id="botao">
+        <input type="button" value="Verificar" onclick="verificar()" id="botao" >
         <div><p id="detected"></p></div>
 
-        <img src="jovemh3.png" alt="peoples" id="img">
+        <img src="" alt="imagem" id="img" class="circle-in-center">
 
         </main>
     </div>
 
-    <script>
-
-        
-
-
-        function verificar() {
-            document.querySelector("main.quadro").style.height = "345px"
-            document.querySelector("main.quadro").style.transition = "height 0.3s ease"
-            document.querySelector("main.quadro").style.marginTop = "20px"
-
-            
-
-            var data = new Date()
-            var ano = data.getFullYear()
-            var fano = document.getElementById('txtano')
-            var res = document.getElementById('detected')
-
-            if(fano.value.length == 0 || fano.value > ano){
-                window.alert('[ERRO] Verifique os dados e TENTE NOVAMENTE!')
-            }
-            else{
-                var fsexo = document.getElementsByName('sexo')
-                var idade = ano - Number(fano.value)
-               
-                if(fsexo[0].checked){
-
-                    genero = 'Homem'
-
-                    if(idade >0 && idade <= 10){
-                        document.querySelector('div.img').style.display = "block"
-                        document.querySelector('div.img').style.backgroundImage = "url('bebeh.jpg')"
-                        document.querySelector('div.img').style.backgroundPosition = "right"
-
-                        
-
-                    }
-                    else if(idade < 21){
-                       /* document.querySelector('div.img').style.backgroundImage = "url('jovemh.jpg')"
-                        document.querySelector('div.img').style.display = "block"*/
-
-                        
-                    }
-                    else if(idade < 50){
-
-                    }
-                    else {
-                        
-                    }
-            } else if (fsexo[1].checked){
-                    genero = 'Mulher'
-
-                    if(idade >0 && idade <= 10){
-
-                    }
-                    else if(idade < 21){
-                        
-                    }
-                    else if(idade < 50){
-
-                    }
-                    else {
-                        
-                    }
-            }
-
-            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
-
-               
-            }
-            document.querySelector("p#detected").style.display = "block"
-            idade = (2024 - nasc)
-
-            
-            
-            document.querySelector("div.img").style.transition = "height 0.4s ease"
-          
-            
-
-
-        }
-
-    </script>
+    <script src="script.js"></script>
     
 </body>
 </html>

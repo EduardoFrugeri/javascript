@@ -1,0 +1,125 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.281);
+}
+
+body{
+    background-color: rgb(56, 142, 255);
+}
+
+h1{
+    text-align: center;
+    margin: 15px;
+    
+    color: white;
+    font-size: 1.6em;
+}
+main#quadro{
+    display: block;
+    margin: auto;
+    width: 500px;
+    height: 130px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.521);
+    transition:  height 0.3s ease;
+}
+p{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px;
+}
+
+p#detected{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px;
+    margin-top: -5px;
+    color: rgb(0, 0, 0);
+    display: none;
+   
+    
+}
+
+
+
+form#form1{
+    padding: 10px;
+
+}
+
+form#form2{
+    margin-top: -5px;
+    padding: 10px;
+    padding-bottom: 12px;
+    
+
+}
+
+input#botao{
+    padding: 7px 20px;
+    display: block;
+    
+    margin: auto;
+    
+}
+
+img{
+
+    margin: auto;
+    display: none;
+   
+    width: 190px;
+    height: 190px;
+    
+    
+   
+  
+
+    
+
+    
+}
+
+/*Animations*/
+
+@keyframes circle-in-center {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(125%);
+    }
+  }
+  
+  .circle-in-center {
+      animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+      animation-delay: 1s;
+    }
+
+
+
+
+
+    @keyframes wipe-in-down {
+        from {
+          clip-path: inset(0 0 100% 0);
+        }
+        to {
+          clip-path: inset(0 0 0 0);
+        }
+      }
+      
+      .wipe-in-down {
+        animation: 4s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+      }
+
+      /*Animations*/
+
+
+::-webkit-scrollbar{
+    overflow: hidden;
+}
