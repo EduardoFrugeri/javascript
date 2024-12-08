@@ -4,4 +4,35 @@
 
 	
 	Módulo A
+
+	Módulo E
+	repetições aula 012 e 013
+
+
+1 - teste no inicio depois executa o bloco
+var c = 1
+	while (c <= 10){
+    console.log(`Passo ${c}`)  
+    c++ 
+}
+enquanto c for = ou menor que 10 vai voltar e realizar denovo c++ = c+1
+
+
+2 - executa o bloco e depois testa
+
+var c = 0
+do {
+    console.log(`Passo ${c}`)
+    c++
+} while(c <= 10)
+
+
+
+3-     
+    inicial     até  incremento
+       |         |       |
+for(var c = 1; c <= 5; c+=1){
+    console.log(c)
+}
+
 		
