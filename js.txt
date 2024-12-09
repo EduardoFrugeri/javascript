@@ -35,4 +35,25 @@ for(var c = 1; c <= 5; c+=1){
     console.log(c)
 }
 
+
+
+    Módulo F
+
+    arrays-
+
+let num = [ 5 , 8 , 2 ]
+            0   1   2
+
+
+num [3] = 6   //adiciona o numero 6 na casa 3
+num.push(7)   //adiciona o numero 7 na ultima casa
+num.length    //comprimento
+num.sort()    //coloca os numeros em ordem crescente
+
+//  A ORDEM INFLUENCIA EM MUITO !!!
+
+for( let pos in valores){ //para variaveis compostas
+        console.log('a posição ${pos} tem o valor ${valores[pos]}')
+    } 
+
 		
