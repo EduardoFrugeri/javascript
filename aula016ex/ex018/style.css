@@ -1,0 +1,105 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.281);
+}
+
+body{
+    background-color: rgb(56, 142, 255);
+}
+
+h1{
+    text-align: center;
+    margin: 15px;
+    
+    color: white;
+    font-size: 1.6em;
+}
+main#quadro{
+    display: block;
+    margin: auto;
+    width: 500px;
+   
+    background-color: white;
+    padding: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.521);
+    transition:  height 0.2s ease;
+   
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.363);
+}
+p{
+    font-size: 1.2em;
+    text-align: justify;
+    margin-bottom: 10px;
+    
+
+ 
+}
+
+
+div.containerinpt{
+    margin: 15px 0px;
+    
+}
+
+
+
+
+
+input#botao{
+    padding: 5px 17px;
+    display: block;
+
+    margin: auto;
+    margin-top: 10px;
+    
+    
+}
+
+select#flista{
+  width: 150px;
+}
+
+
+/*Animations*/
+
+@keyframes circle-in-center {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(125%);
+    }
+  }
+  
+  .circle-in-center {
+      animation: 1s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+      animation-delay: 1s;
+    }
+
+
+
+
+
+    @keyframes wipe-in-down {
+        from {
+          clip-path: inset(0 0 100% 0);
+        }
+        to {
+          clip-path: inset(0 0 0 0);
+        }
+      }
+      
+      .wipe-in-down {
+        animation: 3s cubic-bezier(.25, 1, .30, 2) wipe-in-down;
+      }
+
+      /*Animations*/
+
+
+::-webkit-scrollbar{
+    overflow: hidden;
+}
