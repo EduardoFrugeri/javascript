@@ -55,5 +55,7 @@ num.sort()    //coloca os numeros em ordem crescente
 for( let pos in valores){ //para variaveis compostas
         console.log('a posição ${pos} tem o valor ${valores[pos]}')
     } 
+
+    
  funções = verificar a aula 016
 		
